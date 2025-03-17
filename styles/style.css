@@ -1,0 +1,30 @@
+
+/* selector + property + value */
+
+/* selector {
+  property: value;
+}
+
+*/
+
+p { /* selector <p> */
+  color: rgb(0, 0, 255);
+  font-size: 20px; 
+  /* los tamaños pueden expresarse 
+  con distintas unidades */
+    /* 
+    - px, es para texto; 
+    - %, se usa para anchos y altos
+    ; em, rem, vw, vh */
+  margin: 10px;
+}
+
+h1 {
+  color: #370281c6;
+  font-size: 40px;
+  margin: 20px;
+}
+
+body {
+  background-color: #9b9999;
+}
