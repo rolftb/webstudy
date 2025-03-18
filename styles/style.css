@@ -1,30 +1,58 @@
 
-/* selector + property + value */
 
-/* selector {
-  property: value;
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
+
+html {
+  font-family: "Libre Baskerville", serif;
+  font-size: 62.5%;
+  /* 1rem = 10px , ajustado con el font-size */
 }
 
-*/
-
-p { /* selector <p> */
-  color: rgb(0, 0, 255);
-  font-size: 20px; 
-  /* los tamaños pueden expresarse 
-  con distintas unidades */
-    /* 
-    - px, es para texto; 
-    - %, se usa para anchos y altos
-    ; em, rem, vw, vh */
-  margin: 10px;
+/* Heder */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
 }
 
-h1 {
-  color: #370281c6;
-  font-size: 40px;
-  margin: 20px;
+heder image {
+  width: 50rem;
 }
 
-body {
-  background-color: #9b9999;
+header h1 {
+  font-size: 2rem;
+}
+
+header ul {
+list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* links no heredan, entoces cuando se pone en el header, se pone en el a */
+header a {
+  color: #57f817;
+  text-decoration: none;
+}
+
+/* Main  index.html */
+main {
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 0 1rem;
+  /* acá se pone el padding para que no quede pegado al borde */
+  background-image:   
+  linear-gradient(
+    rgba(0, 0, 255, 0.5),
+    rgba(255, 255, 0, 0.5)),
+  url('../img/bg.jpg');
+  /* se pone la imagen de fondo */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-image */	
+  /* PARA configurar y probar la imagen y distintas configuraciones */
+
+  background-size: cover;
+  /* se ajusta la imagen al tamaño del contenedor */
+  background-size: contain
+  /* se ajusta la imagen al tamaño de la imagen */
 }
