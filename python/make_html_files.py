@@ -91,6 +91,7 @@ for nombre, title, parrafo in zip(nombres_archivos, Title_html, parrafos_main):
 <body>
     <header>
         <h1>{title}</h1>
+        <img src="../media/logo.jpg" alt="Logo de Veterinaria PA a Domicilio" class="logo">
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
