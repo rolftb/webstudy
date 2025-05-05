@@ -79,50 +79,7 @@ for nombre, title, parrafo in zip(nombres_archivos, Title_html, parrafos_main):
     print(f"Creando archivo: {nombre}")
     with open(nombre, 'w', encoding='utf-8') as archivo:
         # Escribir contenido HTML básico
-        contenido = f"""<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
-    <!-- Estilos CSS -->
-    <link rel="stylesheet" href="../styles/style.css">
-</head>
-<body>
-    <header>
-        <h1>{title}</h1>
-        <img src="../media/logo.jpg" alt="Logo de Veterinaria PA a Domicilio" class="logo">
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/about.html">Sobre Nosotros</a></li>
-                    <ul>
-                        <li><a href="../pages/team.html">Equipo</a></li>
-                        <li><a href="../pages/history.html">Historia</a></li>
-                    </ul>
-                <li><a href="../pages/services.html">Servicios</a></li>
-                    <ul>
-                        <li><a href="../pages/wellness.html">Planes de Bienestar</a></li>
-                        <li><a href="../pages/appointments.html">Citas y Precios</a></li>
-                        <li><a href="../pages/emergencies.html">Emergencias</a></li>
-                        <li><a href="../pages/euthanasia.html">Eutanasia en Casa</a></li>
-                        <li><a href="../pages/testimonials.html">Testimonios</a></li>
-                    </ul>
-                <li><a href="../pages/contact.html">Contacto</a></li>
-                <li><a href="../pages/blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-    </header>
-    <main>
-        {parrafo}
-    </main>
-    <footer>
-        <p>&copy; 2025 Pa Veterinaria</p>
-    </footer>
-</body>
-</html>
+        contenido = f"""
 """
         archivo.write(contenido)
     print("Archivos creados con éxito."
