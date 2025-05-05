@@ -31,27 +31,51 @@ header {
   text-align: center;
 }
 
-.logo {
-  width: 100px;
-}
 
 header h1 {
   font-size: 2rem;
 }
 
-header nav ul {
-list-style: none;
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-3);
-  color: var(--color-words-1);
-  display: flex;
-  /* justify-content: center; */
+.navbar-principal {
   /* se pone el display flex para que se acomoden los elementos */
-  /* justify-content: center; para centrar los elementos */
-  /* align-items: center; para alinear los elementos */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: var(--color-3);
+  align-items: center; /* se pone el align-items center para que se acomoden los elementos, verticalmente */
+  align-content: center; /* se pone el align-content center para que se acomoden los elementos, verticalmente */
 }
 
+.logo {
+  width: 50px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin: 0; /* Elimina márgenes adicionales */
+  display: inline-block; /* Cambia a block para mejor alineación */
+  border-radius: 50%;
+  border: 
+    var(--color-1) 
+    solid 1px;
+}
+
+.item-navbar {
+  margin: 2px; /* Ajusta el margen entre los elementos */
+  padding: 10px; /* Ajusta el padding entre los elementos */
+  width: 10%; /* Ajusta el ancho de los elementos */
+  display: inline-block; /* Cambia a flex para mejor alineación */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  border-radius: 12%;
+  border: 
+    var(--color-2) 
+    solid 1px;
+  background-color: 
+    var(--color-1);
+  /* Cambia el formato letras y color */
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-words-1);
+  text-align: center; /* Centra el texto */
+}
 
 /* links no heredan, entoces cuando se pone en el header, se pone en el a */
 header a {
