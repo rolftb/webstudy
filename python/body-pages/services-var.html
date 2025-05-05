@@ -1,0 +1,26 @@
+<body>
+    <header>
+        <h1>{{ header.title }}</h1>
+        <p>{{ header.subtitle }}</p>
+    </header>
+    <main>
+        <h2>{{ main.welcome.title }}</h2>
+        <p>{{ main.welcome.description }}</p>
+        <nav>
+            <ul>
+                {% for item in main.nav %}
+                <li><a href="#{{ item.id }}">{{ item.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+        {% for section in main.sections %}
+        <section id="{{ section.id }}">
+            <h2>{{ section.title }}</h2>
+            <p>{{ section.content }}</p>
+        </section>
+        {% endfor %}
+    </main>
+    <footer>
+        <p>{{ footer.content }}</p>
+    </footer>
+</body>
