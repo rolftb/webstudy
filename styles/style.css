@@ -36,13 +36,6 @@ header {
   overflow: hidden; /* Evita que los elementos sobresalgan del contenedor */
 }
 
-.header-top {
-  /* existing code for .btn_primary */
-}
-
-.header-middle {
-  /* existing code for .page_title */
-}
 
 .header-top a {
   width: 100%;
@@ -92,7 +85,7 @@ header {
 .navbar-principal ul{
   /* se pone el display flex para que se acomoden los elementos */
   display: flex;
-  flex-flow: row-wrap;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: center; /* Centra horizontalmente */
   align-items: space-between;
@@ -110,7 +103,7 @@ header {
   box-sizing: border-box;
 }
 
-.navbar-principal ul li .item-navbar {
+.item-navbar {
   text-decoration: none;
   margin: 2px; /* Ajusta el margen entre los elementos */
   padding: 10px; /* Ajusta el padding entre los elementos */
