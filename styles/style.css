@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
 
 /* Color palette */
@@ -8,11 +6,12 @@
   --color-2: #E69DB8; /* pink */
   --color-3: #FFD0C7; /* light pink */
   --color-4: #FFFECE; /* light yellow */
+  --color-5: #923182; /* dark purple */
   --color-words-1: #210F37; /* dark purple */
-  --color-5: rgb(241, 231, 231);
-  --color-6: rgb(230, 157, 184);
-  --color-7: rgb(255, 208, 199);
-  --color-8: rgb(255, 254, 206);
+  --color-rgb-5: rgb(241, 231, 231);
+  --color-rgb-6: rgb(230, 157, 184);
+  --color-rgb-7: rgb(255, 208, 199);
+  --color-rgb-8: rgb(255, 254, 206);
 }
 /* Reset CSS */
 html {
@@ -25,45 +24,88 @@ html {
 
 /* Heder */
 header {
-  background-color: var(--color-2);
+  background-color: var(--color-3);
   color: var(--color-words-1);
-  padding: 10px 0;
-  text-align: center;
+  width: 100%;
+  margin-top: 0; /* Elimina el espacio superior del bloque header */
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Cambia a columna para apilar los elementos */
+  box-sizing: border-box; /* Asegura que el padding y borde estén incluidos en el tamaño total */
+  overflow: hidden; /* Evita que los elementos sobresalgan del contenedor */
 }
 
-
-header h1 {
-  font-size: 2rem;
+.btn_primary a {
+  width: 100%;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: var(--color-5);
+  display: flex; /* Cambia a flex para mejor alineación */
+  align-items: center; /* Centra verticalmente */
 }
-
-.navbar-principal {
-  /* se pone el display flex para que se acomoden los elementos */
+.btn_primary h1 {
+  color: var(--color-1);
+  width: 100%;
+  display: block;
+  padding: 10px;
+  background-color: var(--color-5);
+  text-align: center; /* Centra el texto */
+}
+.page_title a {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  background-color: var(--color-3);
-  align-items: center; /* se pone el align-items center para que se acomoden los elementos, verticalmente */
-  align-content: center; /* se pone el align-content center para que se acomoden los elementos, verticalmente */
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-words-1);
+  margin: 0; /* Elimina el margen superior e inferior */
+  padding: 10px; /* Agrega un poco de espacio alrededor del texto */
+  align-items: center; /* Centra verticalmente */
+  justify-content: flex-start; /* Centra horizontalmente */
 }
-
-.logo {
-  width: 50px; /* Ajusta el tamaño del logo */
-  height: auto;
-  margin: 0; /* Elimina márgenes adicionales */
-  display: inline-block; /* Cambia a block para mejor alineación */
+.page_title a .logo {
+  height: 50px; /* Ajusta el tamaño del logo */
+  background-color: var(--color-5);
+  margin: 5px;
   border-radius: 50%;
   border: 
     var(--color-1) 
     solid 1px;
 }
+.page_title a h2 {
+  height: 80%;
+  font-size: 2rem; /* Ajusta el tamaño de la fuente */
+  font-weight: bold;
+  color: var(--color-words-1);
+  margin: 0; /* Elimina el margen superior e inferior */
+  padding: 10px; /* Agrega un poco de espacio alrededor del texto */
+}
 
-.item-navbar {
+.navbar-principal ul{
+  /* se pone el display flex para que se acomoden los elementos */
+  display: flex;
+  flex-flow: row-wrap;
+  width: 100%;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: space-between;
+  background-color: var(--color-3);
+  margin: 0; /* Elimina cualquier margen adicional */
+  padding: 0; /* Elimina cualquier padding adicional */
+}
+
+.navbar-principal ul il {
+  width: 100%;
+  display: flex; /* Asegura que los elementos hijos se alineen correctamente */
+  flex-flow: row-wrap; /* Permite que los elementos se ajusten en varias filas */
+  justify-content: center; /* Centra el contenido dentro de cada elemento */
+  box-sizing: border-box; /* Asegura que el tamaño sea consistente */
+}
+
+.navbar-principal ul il .item-navbar {
+  text-decoration: none;
   margin: 2px; /* Ajusta el margen entre los elementos */
   padding: 10px; /* Ajusta el padding entre los elementos */
-  width: 10%; /* Ajusta el ancho de los elementos */
   display: inline-block; /* Cambia a flex para mejor alineación */
   align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
   border-radius: 12%;
   border: 
     var(--color-2) 
@@ -77,13 +119,6 @@ header h1 {
   text-align: center; /* Centra el texto */
 }
 
-/* links no heredan, entoces cuando se pone en el header, se pone en el a */
-header a {
-  text-decoration: none;
-  color: var(--color-words-1);
-  padding: 10px;
-  display: inline-block;
-}
 
 /* Main  index.html */
 main {
