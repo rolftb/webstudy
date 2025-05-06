@@ -31,11 +31,20 @@ header {
   padding: 0;
   display: flex;
   flex-direction: column; /* Cambia a columna para apilar los elementos */
+  gap: 10px; /* Añade espacio entre las secciones del header */
   box-sizing: border-box; /* Asegura que el padding y borde estén incluidos en el tamaño total */
   overflow: hidden; /* Evita que los elementos sobresalgan del contenedor */
 }
 
-.btn_primary a {
+.header-top {
+  /* existing code for .btn_primary */
+}
+
+.header-middle {
+  /* existing code for .page_title */
+}
+
+.header-top a {
   width: 100%;
   text-decoration: none;
   font-weight: bold;
@@ -43,7 +52,7 @@ header {
   display: flex; /* Cambia a flex para mejor alineación */
   align-items: center; /* Centra verticalmente */
 }
-.btn_primary h1 {
+.header-top h1 {
   color: var(--color-1);
   width: 100%;
   display: block;
@@ -51,7 +60,7 @@ header {
   background-color: var(--color-5);
   text-align: center; /* Centra el texto */
 }
-.page_title a {
+.header-middle a {
   display: flex;
   flex-direction: row;
   text-decoration: none;
@@ -62,7 +71,7 @@ header {
   align-items: center; /* Centra verticalmente */
   justify-content: flex-start; /* Centra horizontalmente */
 }
-.page_title a .logo {
+.header-middle a .logo {
   height: 50px; /* Ajusta el tamaño del logo */
   background-color: var(--color-5);
   margin: 5px;
@@ -71,7 +80,7 @@ header {
     var(--color-1) 
     solid 1px;
 }
-.page_title a h2 {
+.header-middle a h2 {
   height: 80%;
   font-size: 2rem; /* Ajusta el tamaño de la fuente */
   font-weight: bold;
@@ -90,17 +99,18 @@ header {
   background-color: var(--color-3);
   margin: 0; /* Elimina cualquier margen adicional */
   padding: 0; /* Elimina cualquier padding adicional */
+  list-style: none; /* Elimina los estilos de lista predeterminados */
 }
 
-.navbar-principal ul il {
-  width: 100%;
-  display: flex; /* Asegura que los elementos hijos se alineen correctamente */
-  flex-flow: row-wrap; /* Permite que los elementos se ajusten en varias filas */
-  justify-content: center; /* Centra el contenido dentro de cada elemento */
-  box-sizing: border-box; /* Asegura que el tamaño sea consistente */
+.navbar-principal ul li {
+  flex: 1; /* Asegura que los elementos ocupen el mismo espacio horizontal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.navbar-principal ul il .item-navbar {
+.navbar-principal ul li .item-navbar {
   text-decoration: none;
   margin: 2px; /* Ajusta el margen entre los elementos */
   padding: 10px; /* Ajusta el padding entre los elementos */
