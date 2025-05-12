@@ -1,39 +1,66 @@
-<main>
-    
-<div class="beginning-page">
-    <h1>Acerca de Nosotros</h1>
-    <p>Conoce nuestra historia, equipo y valores que nos hacen únicos.</p>
-</div>
-<nav>
-    <ul>
-        <li><a href="#welcome">Bienvenida</a></li>
-        <li><a href="#team">Nuestro Equipo</a></li>
-        <li><a href="#history">Nuestra Historia</a></li>
-        <li><a href="#values">Nuestros Valores</a></li>
-        <li><a href="#testimonials">Testimonios</a></li>
-    </ul>
-</nav>
-<section id="welcome">
-    <h2>Bienvenida</h2>
-    <p>En nuestra veterinaria, nos dedicamos a brindar el mejor cuidado para tus mascotas.</p>
-</section>
-<section id="team">
-    <h2>Nuestro Equipo</h2>
-    <p>Contamos con un equipo de profesionales altamente capacitados y apasionados por los animales.</p>
-    <!-- Aquí puedes agregar perfiles individuales del equipo -->
-</section>
-<section id="history">
-    <h2>Nuestra Historia</h2>
-    <p>Desde nuestros inicios, hemos trabajado para convertirnos en una referencia en el cuidado veterinario.</p>
-    <!-- Aquí puedes agregar una línea de tiempo o hitos importantes -->
-</section>
-<section id="values">
-    <h2>Nuestros Valores</h2>
-    <p>Nos guiamos por la compasión, la excelencia y el compromiso con el bienestar animal.</p>
-    <!-- Aquí puedes detallar valores específicos -->
-</section>
-<section id="testimonials">
-    <h2>Testimonios</h2>
-    <p>Descubre lo que nuestros clientes dicen sobre nosotros y cómo hemos ayudado a sus mascotas.</p>
-    <!-- Aquí puedes agregar citas o historias de clientes -->
-</section>
+<main class="about-main">
+    <!-- Sección de bienvenida -->
+    <section class="about-hero" aria-labelledby="about-title">
+        <div class="about-hero__content">
+            <h1 id="about-title">Acerca de Nosotros</h1>
+            <p>Conoce nuestra historia, equipo y valores que nos hacen únicos.</p>
+            <img src="../media/team.jpg" alt="Equipo de la veterinaria posando juntos" class="about-hero__img">
+        </div>
+    </section>
+    <!-- Navegación interna -->
+    <nav class="about-nav" aria-label="Navegación de secciones">
+        <ul class="about-nav__list">
+            <li><a href="#welcome" class="about-nav__link">Bienvenida</a></li>
+            <li><a href="#team" class="about-nav__link">Nuestro Equipo</a></li>
+            <li><a href="#history" class="about-nav__link">Nuestra Historia</a></li>
+            <li><a href="#values" class="about-nav__link">Nuestros Valores</a></li>
+            <li><a href="#testimonials" class="about-nav__link">Testimonios</a></li>
+        </ul>
+    </nav>
+    <!-- Sección de bienvenida -->
+    <section id="welcome" class="about-section">
+        <h2>Bienvenida</h2>
+        <p>En nuestra veterinaria, nos dedicamos a brindar el mejor cuidado para tus mascotas.</p>
+    </section>
+    <!-- Sección del equipo -->
+    <section id="team" class="about-section">
+        <h2>Nuestro Equipo</h2>
+        <ul class="about-team__list">
+            <li class="about-team__member">
+                <img src="../media/paulina.jpg" alt="Dra. Paulina Almeyda, veterinaria principal" class="about-team__img">
+                <div>
+                    <h3>Dra. Paulina Almeyda</h3>
+                    <p>Veterinaria principal con más de 10 años de experiencia en medicina animal.</p>
+                </div>
+            </li>
+            <!-- Puedes agregar más miembros aquí -->
+        </ul>
+    </section>
+    <!-- Sección de historia -->
+    <section id="history" class="about-section">
+        <h2>Nuestra Historia</h2>
+        <ol class="about-history__timeline">
+            <li><strong>2010:</strong> Fundación de la veterinaria.</li>
+            <li><strong>2015:</strong> Expansión de servicios a domicilio.</li>
+            <li><strong>2022:</strong> Reconocimiento local por excelencia en atención.</li>
+        </ol>
+    </section>
+    <!-- Sección de valores -->
+    <section id="values" class="about-section">
+        <h2>Nuestros Valores</h2>
+        <ul class="about-values__list">
+            <li>Compasión</li>
+            <li>Excelencia</li>
+            <li>Compromiso con el bienestar animal</li>
+        </ul>
+    </section>
+    <!-- Sección de testimonios -->
+    <section id="testimonials" class="about-section">
+        <h2>Testimonios</h2>
+        <blockquote class="about-testimonial">
+            <p>"Gracias a la Dra. Paulina, mi perro volvió a ser feliz y saludable."</p>
+            <footer>- Cliente satisfecho</footer>
+        </blockquote>
+        <!-- Puedes agregar más testimonios aquí -->
+    </section>
+</main>
