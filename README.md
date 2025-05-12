@@ -3,6 +3,23 @@
 
 Este repositorio está destinado a estudiar HTML y sus funciones como CSS y otras tecnologías web. Aquí encontrarás ejemplos, ejercicios y recursos para mejorar tus habilidades en desarrollo web.
 
+## Requisitos
+
+Para trabajar con este repositorio necesitas tener instalado **Node.js**.  
+Puedes instalarlo fácilmente usando [Homebrew](https://brew.sh/) en macOS.
+
+Si no tienes Homebrew instalado, puedes instalarlo ejecutando este comando en la terminal:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Luego instala Node.js con:
+```bash
+brew install node
+```
+
+También puedes descargar Node.js directamente desde [nodejs.org](https://nodejs.org/).
+
 ## Contenido
 
 - **HTML**: Estructura básica, etiquetas, atributos, formularios, tablas, etc.
