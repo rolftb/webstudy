@@ -1,3 +1,80 @@
+/* Estilos básicos para móviles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer {
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+a {
+    font-size: 1em;
+}
+
+p {
+    font-size: 1em;
+}
+
+/* Media query para tabletas */
+@media (min-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    header, main, footer {
+        padding: 20px;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+/* Media query para computadoras de escritorio */
+@media (min-width: 1024px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header, main, footer {
+        /* display: flex;
+        justify-content: space-between; */
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+}
+
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
 
 /* Color palette */
