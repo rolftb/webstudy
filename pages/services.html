@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestros servicios</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="../styles/style.css">
 </head>
@@ -31,46 +33,86 @@
             </ul>
         </nav>
     </header>
+    <div class="container">
+    <nav class="nav flex-column bg-light p-3 mb-4" aria-label="Navegación de servicios">
+        <ul class="nav flex-column">
+            <li class="nav-item"><a href="#wellness" class="nav-link">Planes de Bienestar</a></li>
+            <li class="nav-item"><a href="#appointments" class="nav-link">Citas y Precios</a></li>
+            <li class="nav-item"><a href="#emergencies" class="nav-link">Emergencias</a></li>
+            <li class="nav-item"><a href="#euthanasia" class="nav-link">Eutanasia en Casa</a></li>
+            <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonios</a></li>
+        </ul>
+    </nav>
     <main>
-        
-    <h2>Bienvenido a nuestra Veterinaria</h2>
-    <p>Ofrecemos servicios veterinarios a domicilio para el bienestar de tus mascotas.</p>
-<nav>
-    <ul>
-        <li><a href="#wellness">Planes de Bienestar</a></li>
-        <li><a href="#appointments">Citas y Precios</a></li>
-        <li><a href="#emergencies">Emergencias</a></li>
-        <li><a href="#euthanasia">Eutanasia en Casa</a></li>
-        <li><a href="#testimonials">Testimonios</a></li>
-    </ul>
-</nav>
-<section id="wellness">
-    <h2>Planes de Bienestar</h2>
-    <p>Ofrecemos planes personalizados para el cuidado preventivo de tus mascotas.</p>
-</section>
-<section id="appointments">
-    <h2>Citas y Precios</h2>
-    <p>Consulta nuestras tarifas y agenda una cita con nuestros veterinarios.</p>
-</section>
-<section id="emergencies">
-    <h2>Emergencias</h2>
-    <p>Atendemos emergencias veterinarias las 24 horas del día.</p>
-</section>
-<section id="euthanasia">
-    <h2>Eutanasia en Casa</h2>
-    <p>Brindamos un servicio compasivo y respetuoso para despedir a tu mascota en casa.</p>
-</section>
-<section id="testimonials">
-    <h2>Testimonios</h2>
-    <p>Lee lo que nuestros clientes dicen sobre nuestros servicios.</p>
-</section>
+        <!-- Hero de servicios -->
+        <section class="jumbotron text-center">
+            <h1>Bienvenido a nuestra Veterinaria</h1>
+            <p>Ofrecemos servicios veterinarios a domicilio para el bienestar de tus mascotas.</p>
+            <img src="../media/services.jpg" alt="Veterinaria atendiendo a un perro en casa" class="img-fluid mb-4">
+        </section>
+        <!-- Sección de planes de bienestar -->
+        <section id="wellness" class="mb-5">
+            <h2>Planes de Bienestar</h2>
+            <ul>
+                <li>Vacunación y desparasitación</li>
+                <li>Chequeos preventivos</li>
+                <li>Asesoría nutricional</li>
+            </ul>
+        </section>
+        <!-- Sección de citas y precios -->
+        <section id="appointments" class="mb-5">
+            <h2>Citas y Precios</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Consulta general</td>
+                        <td>$500 CLP</td>
+                    </tr>
+                    <tr>
+                        <td>Vacunación</td>
+                        <td>$300 CLP</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="../pages/contact.html" class="btn btn-primary">Agendar cita</a>
+        </section>
+        <!-- Sección de emergencias -->
+        <section id="emergencies" class="mb-5">
+            <h2>Emergencias</h2>
+            <p>Atendemos emergencias veterinarias las 24 horas del día. <strong>Llama al <a href="tel:+521234567890">+52 123 456 7890</a></strong></p>
+        </section>
+        <!-- Sección de eutanasia -->
+        <section id="euthanasia" class="mb-5">
+            <h2>Eutanasia en Casa</h2>
+            <p>Brindamos un servicio compasivo y respetuoso para despedir a tu mascota en casa.</p>
+            <img src="../media/euthanasia.jpg" alt="Dueño despidiéndose de su mascota en casa" class="img-fluid my-3">
+        </section>
+        <!-- Sección de testimonios -->
+        <section id="testimonials" class="mb-5">
+            <h2>Testimonios</h2>
+            <blockquote class="blockquote border-left pl-3">
+                <p class="mb-0">"El servicio a domicilio fue rápido y profesional. ¡Gracias!"</p>
+                <footer class="blockquote-footer">Cliente feliz</footer>
+            </blockquote>
+        </section>
+    </main>
+</div>
 <footer>
     <p>&copy; 2023 Veterinaria a Domicilio. Todos los derechos reservados.</p>
 </footer>
-    </main>
     <footer>
         <p>&copy; 2025 Pa Veterinaria</p>
     </footer>
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
           function toggleNavbar() {
             const nav = document.querySelector('.navbar__list');
