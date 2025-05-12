@@ -4,10 +4,6 @@ body {
     padding: 0;
 }
 
-header, main, footer {
-    padding: 10px;
-    text-align: center;
-}
 
 h1 {
     font-size: 1.5em;
@@ -31,10 +27,6 @@ p {
         padding: 20px;
     }
 
-    header, main, footer {
-        padding: 20px;
-        text-align: left;
-    }
 
     h1 {
         font-size: 2em;
@@ -54,12 +46,6 @@ p {
     body {
         max-width: 1200px;
         margin: 0 auto;
-    }
-
-    header, main, footer {
-        /* display: flex;
-        justify-content: space-between; */
-        padding: 30px;
     }
 
     h1 {
