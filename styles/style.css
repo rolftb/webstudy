@@ -125,6 +125,32 @@ header {
 }
 
 
+  /* Solo para asegurar el menú hamburguesa en caso de que no esté en el CSS principal */
+  .navbar-toggle {
+    display: none;
+    background: var(--color-5, #923182);
+    color: var(--color-1, #fff);
+    border: none;
+    font-size: 2rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 8px;
+  }
+  @media (max-width: 600px) {
+    .navbar-toggle {
+      display: block;
+    }
+    .navbar-principal ul {
+      display: none;
+      flex-direction: column;
+    }
+    .navbar-principal ul.active {
+      display: flex;
+    }
+  }
+
+
 /* Main  index.html */
 main {
   margin: 0 auto;
@@ -145,32 +171,6 @@ footer {
   flex-direction: column; /* Ajustes para móviles */
   height: auto; /* Ajustes para móviles */
 }
-.welcome {
-  display: inline-block;
-  width: 90%; /* Ajustes para móviles */
-  height: auto; /* Ajustes para móviles */
-  background-color: var(--color-3);
-  padding: 15px; /* Ajustes para móviles */
-  margin: 10px auto; /* Ajustes para móviles */
-  border: 2px #210F37 solid ;
-  border-radius: 10px;
-  text-align: center;
-  position: static; /* Ajustes para móviles */
-  left: 5%; /* Ajustes para móviles */
-}
-.services {
-  display:  inline-block;
-  width: 90%; /* Ajustes para móviles */
-  height: auto; /* Ajustes para móviles */
-  background-color: var(--color-3);
-  padding: 15px; /* Ajustes para móviles */
-  border: 2px #210F37 solid ;
-  margin: 10px auto; /* Ajustes para móviles */
-  border-radius: 10px;
-  text-align: center;
-  position: static; /* Ajustes para móviles */
-  left: 5%; /* Ajustes para móviles */
-}
 
 /* Media query para tabletas (600px a 1023px) */
 @media (min-width: 600px) {
@@ -186,6 +186,12 @@ footer {
   .navbar-principal ul {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around; /* Ajustes para escritorio */
+    gap: 5px; /* Espacio entre los elementos */
+    align-items: center; /* Ajustes para tabletas */
+  }
+  .navbar-principal ul li {
+    width: auto; /* Ajustes para tabletas */
   }
   .container {
     flex-direction: row;
@@ -213,6 +219,10 @@ footer {
   }
   .navbar-principal ul {
     flex-direction: row;
+    justify-content: space-around; /* Ajustes para escritorio */
+  }
+  .navbar-principal ul li {
+    width: auto; /* Ajustes para escritorio */
   }
   .container {
     flex-direction: row;
