@@ -449,3 +449,38 @@ body, html {
 html, body {
     overflow-x: hidden;
 }
+
+/* Ejemplo de pseudoclase :hover para botones */
+button:hover {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Ejemplo de pseudoclase :focus para campos de formulario */
+input:focus, textarea:focus {
+    outline: 2px solid var(--color-2);
+    background-color: var(--color-4);
+}
+
+/* Ejemplo de pseudoclase :hover para enlaces personalizados */
+a:hover, .navbar__link:hover, .aside-sidebar__link:hover {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    text-decoration: underline;
+}
+
+/* Ejemplo de :first-child y :last-child en listas */
+ul li:first-child {
+    font-weight: bold;
+    color: var(--color-5);
+}
+ul li:last-child {
+    font-style: italic;
+    color: var(--color-2);
+}
+
+/* Ejemplo de :nth-child para resaltar elementos impares de una lista */
+ul li:nth-child(odd) {
+    background-color: var(--color-3);
+}
