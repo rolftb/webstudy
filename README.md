@@ -10,6 +10,27 @@ Este repositorio está destinado a estudiar HTML y sus funciones como CSS y otra
 - **JavaScript**: Manipulación del DOM, eventos, funciones, etc.
 - **Recursos adicionales**: Enlaces a documentación, tutoriales y herramientas útiles.
 
+## Generación automática de páginas HTML
+
+Este repositorio incluye un script en Python llamado `make_html_files.py` que permite construir varias de las páginas HTML del sitio de forma automática a partir de plantillas y archivos de contenido.
+
+### ¿Cómo funciona?
+
+- El script toma una plantilla base (`python/deaful.html`) y reemplaza variables como `${title}`, `${page_title}` y `${content}`.
+- El contenido principal de cada página se encuentra en archivos individuales dentro de la carpeta `python/body-pages/`.
+- Los archivos HTML generados se guardan en la carpeta `pages/`.
+
+### ¿Cómo usarlo?
+
+1. Asegúrate de tener Python instalado.
+2. Desde la raíz del repositorio, ejecuta el script:
+   ```bash
+   python python/make_html_files.py
+   ```
+3. El script creará (o actualizará) los archivos HTML en la carpeta `pages/` usando la plantilla y los contenidos definidos.
+
+Puedes modificar los archivos de contenido en `python/body-pages/` o la plantilla base para personalizar las páginas generadas.
+
 ## Cómo usar este repositorio
 
 1. Clona el repositorio en tu máquina local.
