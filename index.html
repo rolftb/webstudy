@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Veterinaria PA a Domicilio</title>
-    <!-- Estilos CSS -->
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos CSS personalizados -->
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -33,50 +35,79 @@
     </header>
     <main>
         <section>
-            <div class="main__container">
-                <div class="main__welcome">
-                    <h2>Bienvenido a Veterinaria PA a Domicilio</h2>
-                    <p>En Veterinaria PA a Domicilio, nos preocupamos por la salud y bienestar de tu mascota. Ofrecemos servicios veterinarios a domicilio para que tu mascota reciba la atención que necesita en la comodidad de su hogar.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="main__welcome">
+                            <h2>Bienvenido a Veterinaria PA a Domicilio</h2>
+                            <p>En Veterinaria PA a Domicilio, nos preocupamos por la salud y bienestar de tu mascota. Ofrecemos servicios veterinarios a domicilio para que tu mascota reciba la atención que necesita en la comodidad de su hogar.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="main__services">
+                            <h2>Servicios</h2>
+                            <p>Ofrecemos una amplia gama de servicios veterinarios, incluyendo:</p>
+                            <ul>
+                                <li>Consulta veterinaria a domicilio</li>
+                                <li>Vacunación y desparasitación</li>
+                                <li>Chequeos de salud</li>
+                                <li>Emergencias veterinarias</li>
+                                <li>Eutanasia en casa</li>
+                            </ul>
+                            <p>Consulta nuestros precios y servicios para asegurarte de que tu mascota reciba la mejor atención posible.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="main__services">
-                    <h2>Servicios</h2>
-                    <p>Ofrecemos una amplia gama de servicios veterinarios, incluyendo:</p>
-                    <ul>
-                        <li>Consulta veterinaria a domicilio</li>
-                        <li>Vacunación y desparasitación</li>
-                        <li>Chequeos de salud</li>
-                        <li>Emergencias veterinarias</li>
-                        <li>Eutanasia en casa</li>
-                    </ul>
-                    <p>Consulta nuestros precios y servicios para asegurarte de que tu mascota reciba la mejor atención posible.</p>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h2>Reserva una Cita</h2>
+                        <p>Reserva una cita con nosotros de manera fácil y rápida. Estamos aquí para ayudarte a cuidar de tu mascota.</p>
+                        <form action="https://example.com/submit" method="POST" class="mb-4">
+                            <fieldset>
+                                <legend>Formulario de contacto</legend>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="name">Nombre:</label>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="email">Correo electrónico:</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="phone">Teléfono:</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Mensaje:</label>
+                                    <textarea class="form-control" id="message" name="message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DCDFTO7uELP/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+                            <div style="padding:16px;">
+                                <a href="https://www.instagram.com/p/DCDFTO7uELP/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Ver esta publicación en Instagram</a>
+                            </div>
+                        </blockquote>
+                        <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
                 </div>
             </div>
-            <h2>Reserva una Cita</h2>
-            <p>Reserva una cita con nosotros de manera fácil y rápida. Estamos aquí para ayudarte a cuidar de tu mascota.</p>
-            <form action="https://example.com/submit" method="POST">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="phone">Teléfono:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-        <section>
-            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DCDFTO7uELP/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
-                <div style="padding:16px;">
-                    <a href="https://www.instagram.com/p/DCDFTO7uELP/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Ver esta publicación en Instagram</a>
-                </div>
-            </blockquote>
-            <script async src="//www.instagram.com/embed.js"></script>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 Pa Veterinaria</p>
     </footer>
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
       function toggleNavbar() {
         const nav = document.querySelector('.navbar__list');
