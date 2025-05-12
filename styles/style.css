@@ -224,7 +224,42 @@ footer {
   height: auto;
 }
 
-/* Media query para tabletas (600px a 1023px) */
+.container, .container-fluid {
+  background-color: transparent !important;
+}
+
+body, html {
+  background-color: var(--color-1) !important;
+}
+
+.card {
+  background-color: var(--color-1) !important;
+  border: none;
+};
+
+.header__logo {
+  height: 40px;
+}
+.header__title {
+  font-size: 1.5rem;
+}
+.header__middle a .header__logo {
+  height: 40px;
+}
+.header__middle a .header__title {
+  font-size: 1.5rem;
+}
+.navbar__list {
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.navbar__item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (min-width: 600px) {
   html {
     font-size: 60%;
