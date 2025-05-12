@@ -128,20 +128,6 @@ main {
   margin: 0 auto;
   max-width: 80rem;
   padding: 0 1rem;
-  /* acá se pone el padding para que no quede pegado al borde */
-  background-image:   
-  linear-gradient(
-    var(--color-5) ,
-    var(--color-6))
-  url('../img/bg.jpg');
-  /* se pone la imagen de fondo */
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-image */	
-  /* PARA configurar y probar la imagen y distintas configuraciones */
-
-  background-size: cover;
-  /* se ajusta la imagen al tamaño del contenedor */
-  background-size: contain
-  /* se ajusta la imagen al tamaño de la imagen */
 }
 footer {
   background-color: var(--color-4);
