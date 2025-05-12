@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700");
-/* Color palette */
 :root {
   --color-1: #F1E7E7; /* grey */
   --color-2: #E69DB8; /* pink */
@@ -14,85 +13,6 @@
   --color-rgb-8: rgb(255, 254, 206);
 }
 
-/* Reset CSS */
-html {
-  font-family: "Libre Baskerville", serif;
-  font-size: 55%;
-  background-color: var(--color-1);
-  overflow-x: hidden;
-}
-@media (min-width: 600px) {
-  html {
-    font-size: 60%;
-  }
-}
-@media (min-width: 1024px) {
-  html {
-    font-size: 62.5%;
-  }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-1) !important;
-  overflow-x: hidden;
-}
-@media (min-width: 600px) {
-  body {
-    padding: 20px;
-  }
-}
-@media (min-width: 1024px) {
-  body {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-
-h1, h2, a, p {
-  font-size: 1em;
-}
-
-h1 {
-  font-size: 1.5em;
-}
-
-h2 {
-  font-size: 1.2em;
-}
-
-a {
-  font-size: 1em;
-}
-
-p {
-  font-size: 1em;
-}
-
-@media (min-width: 600px) {
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
-  p {
-    font-size: 1.2em;
-  }
-}
-@media (min-width: 1024px) {
-  h1 {
-    font-size: 2.5em;
-  }
-  h2 {
-    font-size: 2em;
-  }
-  p {
-    font-size: 1.5em;
-  }
-}
-/* Header */
 header {
   background-color: var(--color-3);
   color: var(--color-words-1);
@@ -258,6 +178,108 @@ header .header__middle a .header__title {
     flex-direction: column;
   }
 }
+/* Reset CSS */
+html {
+  font-family: "Libre Baskerville", serif;
+  font-size: 55%;
+  background-color: var(--color-1);
+  overflow-x: hidden;
+}
+@media (min-width: 600px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-1) !important;
+  overflow-x: hidden;
+}
+@media (min-width: 600px) {
+  body {
+    padding: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, a, p {
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+a {
+  font-size: 1em;
+}
+
+p {
+  font-size: 1em;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+}
+/* Menú hamburguesa */
+.navbar__toggle {
+  display: none;
+  background: var(--color-5, #923182);
+  color: var(--color-1, #fff);
+  border: none;
+  font-size: 2rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 8px;
+}
+@media (max-width: 600px) {
+  .navbar__toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar__list {
+    display: none;
+    flex-direction: column;
+  }
+}
 /* Main  index.html */
 main {
   margin: 0 auto;
@@ -360,9 +382,9 @@ footer {
   grid-row: 1;
   grid-column: 1;
   width: 100%;
-  background: var(--color-3);
+  background: var(--color-4);
   border-right: none;
-  border-bottom: 1px solid var(--color-2);
+  border-bottom: 1px solid var(--color-4);
   padding: 1rem 0.5rem;
   position: static;
   top: auto;
@@ -373,7 +395,7 @@ footer {
 @media (min-width: 900px) {
   .aside-sidebar {
     width: 220px;
-    border-right: 1px solid var(--color-2);
+    border-right: 1px solid var(--color-4);
     border-bottom: none;
     padding: 2rem 1rem;
     position: sticky;
@@ -407,14 +429,14 @@ footer {
   border-radius: 8px;
   font-weight: bold;
   background: var(--color-1);
-  border: 1px solid var(--color-2);
+  border: 1px solid var(--color-3);
   transition: background 0.2s, color 0.2s;
   margin-bottom: 0;
   text-align: center;
   white-space: nowrap;
 }
 .aside-sidebar__link:hover, .aside-sidebar__link:focus {
-  background: var(--color-2);
+  background: var(--color-3);
   color: var(--color-1);
   outline: none;
 }

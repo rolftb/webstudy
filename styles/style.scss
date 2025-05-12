@@ -1,4 +1,5 @@
-@import 'variables';
+@use 'variables';
+@use 'header';
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
 
 /* Reset CSS */
@@ -50,130 +51,7 @@ p  { font-size: 1em; }
   p  { font-size: 1.5em; }
 }
 
-/* Header */
-header {
-  background-color: var(--color-3);
-  color: var(--color-words-1);
-  width: 100%;
-  margin-top: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  box-sizing: border-box;
-  overflow: hidden;
-
-  .header__top {
-    a {
-      width: 100%;
-      text-decoration: none;
-      font-weight: bold;
-      background-color: var(--color-5);
-      display: flex;
-      align-items: center;
-    }
-    h1 {
-      color: var(--color-1);
-      width: 100%;
-      display: block;
-      padding: 10px;
-      background-color: var(--color-5);
-      text-align: center;
-    }
-  }
-
-  .header__middle {
-    a {
-      display: flex;
-      flex-direction: row;
-      text-decoration: none;
-      font-weight: bold;
-      color: var(--color-words-1);
-      margin: 0;
-      padding: 10px;
-      align-items: center;
-      justify-content: flex-start;
-
-      .header__logo {
-        height: 35px;
-        background-color: var(--color-5);
-        margin: 5px;
-        border-radius: 50%;
-        border: var(--color-1) solid 1px;
-
-        @media (min-width: 600px) { height: 40px; }
-        @media (min-width: 1024px) { height: 50px; }
-      }
-      .header__title {
-        height: 80%;
-        font-size: 1.3rem;
-        font-weight: bold;
-        color: var(--color-words-1);
-        margin: 0;
-        padding: 5px;
-
-        @media (min-width: 600px) { font-size: 1.7rem; }
-        @media (min-width: 1024px) { font-size: 2rem; }
-      }
-    }
-  }
-}
-
-/* Navbar */
-.navbar__list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  background-color: var(--color-3);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  @media (min-width: 600px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 5px;
-    align-items: center;
-  }
-  @media (min-width: 1024px) {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  &.active {
-    display: flex;
-  }
-}
-
-.navbar__item {
-  flex: unset;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-
-  @media (min-width: 600px) { width: auto; }
-  @media (min-width: 1024px) { width: auto; }
-}
-
-.navbar__link {
-  text-decoration: none;
-  margin: 2px;
-  padding: 12px;
-  display: inline-block;
-  align-items: center;
-  border-radius: 12%;
-  border: var(--color-2) solid 1px;
-  background-color: var(--color-1);
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--color-words-1);
-  text-align: center;
-}
+// (Eliminado: ahora importado desde _header.scss)
 
 /* Menú hamburguesa */
 .navbar__toggle {
@@ -290,9 +168,9 @@ footer {
   grid-row: 1;
   grid-column: 1;
   width: 100%;
-  background: var(--color-3);
+  background: var(--color-4);
   border-right: none;
-  border-bottom: 1px solid var(--color-2);
+  border-bottom: 1px solid var(--color-4);
   padding: 1rem 0.5rem;
   position: static;
   top: auto;
@@ -302,7 +180,7 @@ footer {
 
   @media (min-width: 900px) {
     width: 220px;
-    border-right: 1px solid var(--color-2);
+    border-right: 1px solid var(--color-4);
     border-bottom: none;
     padding: 2rem 1rem;
     position: sticky;
@@ -335,7 +213,7 @@ footer {
   border-radius: 8px;
   font-weight: bold;
   background: var(--color-1);
-  border: 1px solid var(--color-2);
+  border: 1px solid var(--color-3);
   transition: background 0.2s, color 0.2s;
   margin-bottom: 0;
   text-align: center;
@@ -343,7 +221,7 @@ footer {
 
   &:hover,
   &:focus {
-    background: var(--color-2);
+    background: var(--color-3);
     color: var(--color-1);
     outline: none;
   }
