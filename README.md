@@ -3,6 +3,51 @@
 
 Este repositorio está destinado a estudiar HTML y sus funciones como CSS y otras tecnologías web. Aquí encontrarás ejemplos, ejercicios y recursos para mejorar tus habilidades en desarrollo web.
 
+## Requisitos
+
+Para trabajar con este repositorio necesitas tener instalado **Node.js**.  
+Puedes instalarlo fácilmente usando [Homebrew](https://brew.sh/) en macOS.
+
+Si no tienes Homebrew instalado, puedes instalarlo ejecutando este comando en la terminal:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Luego instala Node.js con:
+```bash
+brew install node
+```
+
+También puedes descargar Node.js directamente desde [nodejs.org](https://nodejs.org/).
+
+Después de instalar Node.js, instala Sass globalmente con npm:
+```bash
+npm install -g sass
+```
+
+### Versiones utilizadas
+
+- Node.js: 20.x
+- npm: 10.9.2
+- Sass: 1.77.x
+
+### Actualización de npm
+
+Es posible que al instalar paquetes veas un mensaje como este:
+
+```
+npm notice New major version of npm available! 10.9.2 -> 11.3.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.3.0
+npm notice To update run: npm install -g npm@11.3.0
+npm notice
+```
+
+Si deseas actualizar npm a la última versión recomendada, ejecuta:
+
+```bash
+npm install -g npm@11.3.0
+```
+
 ## Contenido
 
 - **HTML**: Estructura básica, etiquetas, atributos, formularios, tablas, etc.
@@ -30,6 +75,31 @@ Este repositorio incluye un script en Python llamado `make_html_files.py` que pe
 3. El script creará (o actualizará) los archivos HTML en la carpeta `pages/` usando la plantilla y los contenidos definidos.
 
 Puedes modificar los archivos de contenido en `python/body-pages/` o la plantilla base para personalizar las páginas generadas.
+
+## Compilar archivos SCSS a CSS
+
+Para crear y compilar un archivo `style/style-test.scss` y generar el archivo `sass-test.css`, sigue estos pasos:
+
+1. Crea el archivo SCSS:
+   ```bash
+   touch  styles/style.scss 
+   ```
+   Escribe tu código SCSS dentro de ` styles/style.scss ` usando tu editor favorito.
+
+2. Compila el archivo SCSS a CSS usando Sass:
+   ```bash
+   sass  styles/style.scss  styles/test-sass.css
+   ```
+   Esto generará el archivo `test-sass.css` en el mismo directorio.
+
+3. Si quieres que Sass observe los cambios y recompile automáticamente:
+   ```bash
+   sass --watch styles/style.scss:styles/test-sass.css
+   ```
+
+Ahora puedes enlazar `styles/test-sass.css` en tu archivo HTML.
+
+Para detener el proceso de observación, presiona `Ctrl + C` en la terminal.
 
 ## Cómo usar este repositorio
 
