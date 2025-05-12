@@ -16,9 +16,7 @@
 /* Reset CSS */
 html {
   font-family: "Libre Baskerville", serif;
-  font-size: 62.5%;
-  /* 1rem = 10px , ajustado con el font-size 
-  */
+  font-size: 55%;
   background-color: var(--color-1);
 }
 
@@ -31,7 +29,7 @@ header {
   padding: 0;
   display: flex;
   flex-direction: column; /* Cambia a columna para apilar los elementos */
-  gap: 10px; /* Añade espacio entre las secciones del header */
+  gap: 5px; /* Ajustes para móviles */
   box-sizing: border-box; /* Asegura que el padding y borde estén incluidos en el tamaño total */
   overflow: hidden; /* Evita que los elementos sobresalgan del contenedor */
 }
@@ -65,7 +63,7 @@ header {
   justify-content: flex-start; /* Centra horizontalmente */
 }
 .header-middle a .logo {
-  height: 50px; /* Ajusta el tamaño del logo */
+  height: 35px; /* Ajustes para móviles */
   background-color: var(--color-5);
   margin: 5px;
   border-radius: 50%;
@@ -75,11 +73,11 @@ header {
 }
 .header-middle a h2 {
   height: 80%;
-  font-size: 2rem; /* Ajusta el tamaño de la fuente */
+  font-size: 1.3rem; /* Ajustes para móviles */
   font-weight: bold;
   color: var(--color-words-1);
   margin: 0; /* Elimina el margen superior e inferior */
-  padding: 10px; /* Agrega un poco de espacio alrededor del texto */
+  padding: 5px; /* Ajustes para móviles */
 }
 
 .navbar-principal ul{
@@ -87,8 +85,9 @@ header {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  flex-direction: column; /* Ajustes para móviles */
   justify-content: center; /* Centra horizontalmente */
-  align-items: space-between;
+  align-items: stretch; /* Ajustes para móviles */
   background-color: var(--color-3);
   margin: 0; /* Elimina cualquier margen adicional */
   padding: 0; /* Elimina cualquier padding adicional */
@@ -96,7 +95,8 @@ header {
 }
 
 .navbar-principal ul li {
-  flex: 1; /* Asegura que los elementos ocupen el mismo espacio horizontal */
+  flex: unset; /* Ajustes para móviles */
+  width: 100%; /* Ajustes para móviles */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +106,7 @@ header {
 .item-navbar {
   text-decoration: none;
   margin: 2px; /* Ajusta el margen entre los elementos */
-  padding: 10px; /* Ajusta el padding entre los elementos */
+  padding: 12px; /* Ajustes para móviles */
   display: inline-block; /* Cambia a flex para mejor alineación */
   align-items: center; /* Centra verticalmente */
   border-radius: 12%;
@@ -116,7 +116,7 @@ header {
   background-color: 
     var(--color-1);
   /* Cambia el formato letras y color */
-  font-size: 1rem;
+  font-size: 1.1rem; /* Ajustes para móviles */
   font-weight: bold;
   color: var(--color-words-1);
   text-align: center; /* Centra el texto */
@@ -140,33 +140,91 @@ footer {
   border: 2px solid var(--color-words-1);
   position: relative;
   width: 100%;
-  height: 20%;
+  flex-direction: column; /* Ajustes para móviles */
+  height: auto; /* Ajustes para móviles */
 }
 .welcome {
   display: inline-block;
-  width: 40%;
-  height: 50%;
+  width: 90%; /* Ajustes para móviles */
+  height: auto; /* Ajustes para móviles */
   background-color: var(--color-3);
-  padding: 20px;
-  margin: 10px;
+  padding: 15px; /* Ajustes para móviles */
+  margin: 10px auto; /* Ajustes para móviles */
   border: 2px #210F37 solid ;
   border-radius: 10px;
   text-align: center;
-  position: absolute;
-  top: 10%;
-  left: 40%;
+  position: static; /* Ajustes para móviles */
+  left: 5%; /* Ajustes para móviles */
 }
 .services {
   display:  inline-block;
-  width: 30%;
-  height: 50%;
+  width: 90%; /* Ajustes para móviles */
+  height: auto; /* Ajustes para móviles */
   background-color: var(--color-3);
-  padding: 20px;
+  padding: 15px; /* Ajustes para móviles */
   border: 2px #210F37 solid ;
-  margin: 10px;
+  margin: 10px auto; /* Ajustes para móviles */
   border-radius: 10px;
   text-align: center;
-  position: static;
-  /* top: 10px;
-  left: 20px; */
+  position: static; /* Ajustes para móviles */
+  left: 5%; /* Ajustes para móviles */
+}
+
+/* Media query para tabletas (600px a 1023px) */
+@media (min-width: 600px) and (max-width: 1023px) {
+  html {
+    font-size: 60%;
+  }
+  .header-middle a .logo {
+    height: 40px;
+  }
+  .header-middle a h2 {
+    font-size: 1.7rem;
+  }
+  .navbar-principal ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .welcome, .services {
+    width: 45%;
+    margin: 10px 2.5%;
+    position: static;
+    height: auto;
+  }
+}
+
+/* Media query para escritorio (1024px en adelante) */
+@media (min-width: 1024px) {
+  html {
+    font-size: 62.5%;
+  }
+  .header-middle a .logo {
+    height: 50px;
+  }
+  .header-middle a h2 {
+    font-size: 2rem;
+  }
+  .navbar-principal ul {
+    flex-direction: row;
+  }
+  .container {
+    flex-direction: row;
+    height: 20%;
+  }
+  .welcome {
+    width: 40%;
+    left: 40%;
+    position: absolute;
+    height: 50%;
+  }
+  .services {
+    width: 30%;
+    position: static;
+    height: 50%;
+  }
 }
