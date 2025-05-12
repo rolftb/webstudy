@@ -9,25 +9,25 @@
 </head>
 <body>
     <header>
-        <div class="header-top">
+        <div class="header__top">
             <a href="../pages/contact.html" role="button">
                 <h1>Habla con Dra. Paulina Almeyda</h1>
             </a>
         </div>
-        <div class="header-middle">
+        <div class="header__middle">
             <a href="#" role="button">
-                <img src="../media/logo.jpg" alt="Logo de Veterinaria PA a Domicilio" class="logo">
-                <h2>Blog</h2>
+                <img src="../media/logo.jpg" alt="Logo de Veterinaria PA a Domicilio" class="header__logo">
+                <h2 class="header__title">Blog</h2>
             </a>
         </div>
-        <nav class="navbar-principal">
-            <button class="navbar-toggle" aria-label="Abrir menú" onclick="toggleNavbar()">☰</button>
-            <ul>
-                <li><a class="item-navbar" href="../index.html">Inicio</a></li>
-                <li><a class="item-navbar" href="../pages/about.html">Sobre Nosotros</a></li>
-                <li><a class="item-navbar" href="../pages/services.html">Servicios</a></li>
-                <li><a class="item-navbar" href="../pages/contact.html">Contacto</a></li>
-                <li><a class="item-navbar" href="../pages/blog.html">Blog</a></li>
+        <nav class="navbar">
+            <button class="navbar__toggle" aria-label="Abrir menú" onclick="toggleNavbar()">☰</button>
+            <ul class="navbar__list">
+                <li class="navbar__item"><a class="navbar__link" href="../index.html">Inicio</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/about.html">Sobre Nosotros</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/services.html">Servicios</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/contact.html">Contacto</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
@@ -87,5 +87,11 @@
     <footer>
         <p>&copy; 2025 Pa Veterinaria</p>
     </footer>
+    <script>
+          function toggleNavbar() {
+            const nav = document.querySelector('.navbar__list');
+            nav.classList.toggle('active');
+          }
+    </script>
 </body>
 </html>
