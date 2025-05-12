@@ -76,6 +76,29 @@ Este repositorio incluye un script en Python llamado `make_html_files.py` que pe
 
 Puedes modificar los archivos de contenido en `python/body-pages/` o la plantilla base para personalizar las páginas generadas.
 
+## Compilar archivos SCSS a CSS
+
+Para crear y compilar un archivo `style/style-test.scss` y generar el archivo `sass-test.css`, sigue estos pasos:
+
+1. Crea el archivo SCSS:
+   ```bash
+   touch  styles/style-test.scss 
+   ```
+   Escribe tu código SCSS dentro de ` styles/style-test.scss ` usando tu editor favorito.
+
+2. Compila el archivo SCSS a CSS usando Sass:
+   ```bash
+   sass  styles/style-test.scss  styles/sass-test.css
+   ```
+   Esto generará el archivo `sass-test.css` en el mismo directorio.
+
+3. Si quieres que Sass observe los cambios y recompile automáticamente:
+   ```bash
+   sass --watch styles/style-test.scss:styles/sass-test.css
+   ```
+
+Ahora puedes enlazar `styles/sass-test.css` en tu archivo HTML.
+
 ## Cómo usar este repositorio
 
 1. Clona el repositorio en tu máquina local.
