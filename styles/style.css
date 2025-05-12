@@ -112,7 +112,7 @@ header {
 }
 
 
-.header-top a {
+.header__top a {
   width: 100%;
   text-decoration: none;
   font-weight: bold;
@@ -120,7 +120,7 @@ header {
   display: flex; /* Cambia a flex para mejor alineación */
   align-items: center; /* Centra verticalmente */
 }
-.header-top h1 {
+.header__top h1 {
   color: var(--color-1);
   width: 100%;
   display: block;
@@ -128,7 +128,7 @@ header {
   background-color: var(--color-5);
   text-align: center; /* Centra el texto */
 }
-.header-middle a {
+.header__middle a {
   display: flex;
   flex-direction: row;
   text-decoration: none;
@@ -139,7 +139,7 @@ header {
   align-items: center; /* Centra verticalmente */
   justify-content: flex-start; /* Centra horizontalmente */
 }
-.header-middle a .logo {
+.header__middle a .header__logo {
   height: 35px; /* Ajustes para móviles */
   background-color: var(--color-5);
   margin: 5px;
@@ -148,7 +148,7 @@ header {
     var(--color-1) 
     solid 1px;
 }
-.header-middle a h2 {
+.header__middle a .header__title {
   height: 80%;
   font-size: 1.3rem; /* Ajustes para móviles */
   font-weight: bold;
@@ -157,7 +157,7 @@ header {
   padding: 5px; /* Ajustes para móviles */
 }
 
-.navbar-principal ul{
+.navbar__list {
   /* se pone el display flex para que se acomoden los elementos */
   display: flex;
   flex-wrap: wrap;
@@ -171,7 +171,7 @@ header {
   list-style: none; /* Elimina los estilos de lista predeterminados */
 }
 
-.navbar-principal ul li {
+.navbar__item {
   flex: unset; 
   /* Ajustes para móviles */
   width: 100%; 
@@ -182,7 +182,7 @@ header {
   box-sizing: border-box;
 }
 
-.item-navbar {
+.navbar__link {
   text-decoration: none;
   margin: 2px; /* Ajusta el margen entre los elementos */
   padding: 12px; /* Ajustes para móviles */
@@ -203,7 +203,7 @@ header {
 
 
   /* Solo para asegurar el menú hamburguesa en caso de que no esté en el CSS principal */
-  .navbar-toggle {
+  .navbar__toggle {
     display: none;
     background: var(--color-5, #923182);
     color: var(--color-1, #fff);
@@ -215,14 +215,14 @@ header {
     margin: 8px;
   }
   @media (max-width: 600px) {
-    .navbar-toggle {
+    .navbar__toggle {
       display: block;
     }
-    .navbar-principal ul {
+    .navbar__list {
       display: none;
       flex-direction: column;
     }
-    .navbar-principal ul.active {
+    .navbar__list.active {
       display: flex;
     }
   }
@@ -241,7 +241,7 @@ footer {
   text-align: center;
 }
 
-.container {
+.main__container {
   border: 2px solid var(--color-words-1);
   position: relative;
   width: 100%;
@@ -254,28 +254,28 @@ footer {
   html {
     font-size: 60%;
   }
-  .header-middle a .logo {
+  .header__middle a .header__logo {
     height: 40px;
   }
-  .header-middle a h2 {
+  .header__middle a .header__title {
     font-size: 1.7rem;
   }
-  .navbar-principal ul {
+  .navbar__list {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around; /* Ajustes para escritorio */
     gap: 5px; /* Espacio entre los elementos */
     align-items: center; /* Ajustes para tabletas */
   }
-  .navbar-principal ul li {
+  .navbar__item {
     width: auto; /* Ajustes para tabletas */
   }
-  .container {
+  .main__container {
     flex-direction: row;
     flex-wrap: wrap;
     height: auto;
   }
-  .welcome, .services {
+  .main__welcome, .main__services {
     width: 45%;
     margin: 10px 2.5%;
     position: static;
@@ -288,30 +288,30 @@ footer {
   html {
     font-size: 62.5%;
   }
-  .header-middle a .logo {
+  .header__middle a .header__logo {
     height: 50px;
   }
-  .header-middle a h2 {
+  .header__middle a .header__title {
     font-size: 2rem;
   }
-  .navbar-principal ul {
+  .navbar__list {
     flex-direction: row;
     justify-content: space-around; /* Ajustes para escritorio */
   }
-  .navbar-principal ul li {
+  .navbar__item {
     width: auto; /* Ajustes para escritorio */
   }
-  .container {
+  .main__container {
     flex-direction: row;
     height: 20%;
   }
-  .welcome {
+  .main__welcome {
     width: 40%;
     left: 40%;
     position: absolute;
     height: 50%;
   }
-  .services {
+  .main__services {
     width: 30%;
     position: static;
     height: 50%;

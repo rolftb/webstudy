@@ -9,36 +9,36 @@
 </head>
 <body>
     <header>
-        <div class="header-top">
+        <div class="header__top">
             <a href="./pages/contact.html" role="button">
                 <h1>Habla con Dra. Paulina Almeyda</h1>
             </a>
         </div>
-        <div class="header-middle">
+        <div class="header__middle">
             <a href="#" role="button">
-                <img src="./media/logo.jpg" alt="Logo de Veterinaria PA a Domicilio" class="logo">
-                <h2>Inicio</h2>
+                <img src="./media/logo.jpg" alt="Logo de Veterinaria PA a Domicilio" class="header__logo">
+                <h2 class="header__title">Inicio</h2>
             </a>
         </div>
-        <nav class="navbar-principal">
-            <button class="navbar-toggle" aria-label="Abrir menú" onclick="toggleNavbar()">☰</button>
-            <ul>
-                <li><a class="item-navbar" href="./index.html">Inicio</a></li>
-                <li><a class="item-navbar" href="./pages/about.html">Sobre Nosotros</a></li>
-                <li><a class="item-navbar" href="./pages/services.html">Servicios</a></li>
-                <li><a class="item-navbar" href="./pages/contact.html">Contacto</a></li>
-                <li><a class="item-navbar" href="./pages/blog.html">Blog</a></li>
+        <nav class="navbar">
+            <button class="navbar__toggle" aria-label="Abrir menú" onclick="toggleNavbar()">☰</button>
+            <ul class="navbar__list">
+                <li class="navbar__item"><a class="navbar__link" href="./index.html">Inicio</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="./pages/about.html">Sobre Nosotros</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="./pages/services.html">Servicios</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="./pages/contact.html">Contacto</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="./pages/blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <div class="container">
-                <div class="welcome">
+            <div class="main__container">
+                <div class="main__welcome">
                     <h2>Bienvenido a Veterinaria PA a Domicilio</h2>
                     <p>En Veterinaria PA a Domicilio, nos preocupamos por la salud y bienestar de tu mascota. Ofrecemos servicios veterinarios a domicilio para que tu mascota reciba la atención que necesita en la comodidad de su hogar.</p>
                 </div>
-                <div class="services">
+                <div class="main__services">
                     <h2>Servicios</h2>
                     <p>Ofrecemos una amplia gama de servicios veterinarios, incluyendo:</p>
                     <ul>
@@ -79,7 +79,7 @@
     </footer>
     <script>
       function toggleNavbar() {
-        const nav = document.querySelector('.navbar-principal ul');
+        const nav = document.querySelector('.navbar__list');
         nav.classList.toggle('active');
       }
     </script>
