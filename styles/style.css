@@ -1,4 +1,79 @@
+/* Estilos básicos para móviles */
+body {
+    margin: 0;
+    padding: 0;
+}
 
+header, main, footer {
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+a {
+    font-size: 1em;
+}
+
+p {
+    font-size: 1em;
+}
+
+/* Media query para tabletas */
+@media (min-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    header, main, footer {
+        padding: 20px;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+/* Media query para computadoras de escritorio */
+@media (min-width: 1024px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header, main, footer {
+        /* display: flex;
+        justify-content: space-between; */
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+}
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
 
@@ -8,76 +83,237 @@
   --color-2: #E69DB8; /* pink */
   --color-3: #FFD0C7; /* light pink */
   --color-4: #FFFECE; /* light yellow */
+  --color-5: #923182; /* dark purple */
   --color-words-1: #210F37; /* dark purple */
-  --color-5: rgb(241, 231, 231);
-  --color-6: rgb(230, 157, 184);
-  --color-7: rgb(255, 208, 199);
-  --color-8: rgb(255, 254, 206);
+  --color-rgb-5: rgb(241, 231, 231);
+  --color-rgb-6: rgb(230, 157, 184);
+  --color-rgb-7: rgb(255, 208, 199);
+  --color-rgb-8: rgb(255, 254, 206);
 }
 /* Reset CSS */
 html {
   font-family: "Libre Baskerville", serif;
-  font-size: 62.5%;
-  /* 1rem = 10px , ajustado con el font-size 
-  */
+  font-size: 55%;
   background-color: var(--color-1);
 }
 
 /* Heder */
 header {
-  background-color: var(--color-2);
-  color: var(--color-words-1);
-  padding: 10px 0;
-  text-align: center;
-}
-
-.logo {
-  width: 100px;
-}
-
-header h1 {
-  font-size: 2rem;
-}
-
-header ul {
-list-style: none;
-  margin: 0;
-  padding: 0;
   background-color: var(--color-3);
   color: var(--color-words-1);
+  width: 100%;
+  margin-top: 0; /* Elimina el espacio superior del bloque header */
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Cambia a columna para apilar los elementos */
+  gap: 5px; /* Ajustes para móviles */
+  box-sizing: border-box; /* Asegura que el padding y borde estén incluidos en el tamaño total */
+  overflow: hidden; /* Evita que los elementos sobresalgan del contenedor */
 }
 
-/* links no heredan, entoces cuando se pone en el header, se pone en el a */
-header a {
+
+.header__top a {
+  width: 100%;
   text-decoration: none;
-  color: var(--color-words-1);
-  padding: 10px;
-  display: inline-block;
+  font-weight: bold;
+  background-color: var(--color-5);
+  display: flex; /* Cambia a flex para mejor alineación */
+  align-items: center; /* Centra verticalmente */
 }
+.header__top h1 {
+  color: var(--color-1);
+  width: 100%;
+  display: block;
+  padding: 10px;
+  background-color: var(--color-5);
+  text-align: center; /* Centra el texto */
+}
+.header__middle a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-words-1);
+  margin: 0; /* Elimina el margen superior e inferior */
+  padding: 10px; /* Agrega un poco de espacio alrededor del texto */
+  align-items: center; /* Centra verticalmente */
+  justify-content: flex-start; /* Centra horizontalmente */
+}
+.header__middle a .header__logo {
+  height: 35px; /* Ajustes para móviles */
+  background-color: var(--color-5);
+  margin: 5px;
+  border-radius: 50%;
+  border: 
+    var(--color-1) 
+    solid 1px;
+}
+.header__middle a .header__title {
+  height: 80%;
+  font-size: 1.3rem; /* Ajustes para móviles */
+  font-weight: bold;
+  color: var(--color-words-1);
+  margin: 0; /* Elimina el margen superior e inferior */
+  padding: 5px; /* Ajustes para móviles */
+}
+
+.navbar__list {
+  /* se pone el display flex para que se acomoden los elementos */
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column; /* Ajustes para móviles */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: stretch; /* Ajustes para móviles */
+  background-color: var(--color-3);
+  margin: 0; /* Elimina cualquier margen adicional */
+  padding: 0; /* Elimina cualquier padding adicional */
+  list-style: none; /* Elimina los estilos de lista predeterminados */
+}
+
+.navbar__item {
+  flex: unset; 
+  /* Ajustes para móviles */
+  width: 100%; 
+  /* Ajustes para móviles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.navbar__link {
+  text-decoration: none;
+  margin: 2px; /* Ajusta el margen entre los elementos */
+  padding: 12px; /* Ajustes para móviles */
+  display: inline-block; /* Cambia a flex para mejor alineación */
+  align-items: center; /* Centra verticalmente */
+  border-radius: 12%;
+  border: 
+    var(--color-2) 
+    solid 1px;
+  background-color: 
+    var(--color-1);
+  /* Cambia el formato letras y color */
+  font-size: 1.1rem; /* Ajustes para móviles */
+  font-weight: bold;
+  color: var(--color-words-1);
+  text-align: center; /* Centra el texto */
+}
+
+
+  /* Solo para asegurar el menú hamburguesa en caso de que no esté en el CSS principal */
+  .navbar__toggle {
+    display: none;
+    background: var(--color-5, #923182);
+    color: var(--color-1, #fff);
+    border: none;
+    font-size: 2rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 8px;
+  }
+  @media (max-width: 600px) {
+    .navbar__toggle {
+      display: block;
+    }
+    .navbar__list {
+      display: none;
+      flex-direction: column;
+    }
+    .navbar__list.active {
+      display: flex;
+    }
+  }
+
 
 /* Main  index.html */
 main {
   margin: 0 auto;
   max-width: 80rem;
   padding: 0 1rem;
-  /* acá se pone el padding para que no quede pegado al borde */
-  background-image:   
-  linear-gradient(
-    var(--color-5) ,
-    var(--color-6))
-  url('../img/bg.jpg');
-  /* se pone la imagen de fondo */
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-image */	
-  /* PARA configurar y probar la imagen y distintas configuraciones */
-
-  background-size: cover;
-  /* se ajusta la imagen al tamaño del contenedor */
-  background-size: contain
-  /* se ajusta la imagen al tamaño de la imagen */
 }
 footer {
   background-color: var(--color-4);
   color: var(--color-words-1);
   padding: 10px 0;
   text-align: center;
+}
+
+.main__container {
+  border: 2px solid var(--color-words-1);
+  position: relative;
+  width: 100%;
+  flex-direction: column; /* Ajustes para móviles */
+  height: auto; /* Ajustes para móviles */
+}
+
+/* Media query para tabletas (600px a 1023px) */
+@media (min-width: 600px) {
+  html {
+    font-size: 60%;
+  }
+  .header__middle a .header__logo {
+    height: 40px;
+  }
+  .header__middle a .header__title {
+    font-size: 1.7rem;
+  }
+  .navbar__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Ajustes para escritorio */
+    gap: 5px; /* Espacio entre los elementos */
+    align-items: center; /* Ajustes para tabletas */
+  }
+  .navbar__item {
+    width: auto; /* Ajustes para tabletas */
+  }
+  .main__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .main__welcome, .main__services {
+    width: 45%;
+    margin: 10px 2.5%;
+    position: static;
+    height: auto;
+  }
+}
+
+/* Media query para escritorio (1024px en adelante) */
+@media (min-width: 1024px) {
+  html {
+    font-size: 62.5%;
+  }
+  .header__middle a .header__logo {
+    height: 50px;
+  }
+  .header__middle a .header__title {
+    font-size: 2rem;
+  }
+  .navbar__list {
+    flex-direction: row;
+    justify-content: space-around; /* Ajustes para escritorio */
+  }
+  .navbar__item {
+    width: auto; /* Ajustes para escritorio */
+  }
+  .main__container {
+    flex-direction: row;
+    height: 20%;
+  }
+  .main__welcome {
+    width: 40%;
+    left: 40%;
+    position: absolute;
+    height: 50%;
+  }
+  .main__services {
+    width: 30%;
+    position: static;
+    height: 50%;
+  }
 }

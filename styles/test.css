@@ -1,0 +1,42 @@
+/* Color palette */
+:root {
+    --color-1: #F1E7E7; /* grey */ 
+    --color-2: #E69DB8; /* pink */
+    --color-3: #FFD0C7; /* light pink */
+    --color-4: #FFFECE; /* light yellow */
+    --color-5: #923182; /* dark purple */
+    --color-words-1: #210F37; /* dark purple */
+    --color-rgb-5: rgb(241, 231, 231);
+    --color-rgb-6: rgb(230, 157, 184);
+    --color-rgb-7: rgb(255, 208, 199);
+    --color-rgb-8: rgb(255, 254, 206);
+  }
+
+
+.flex-container {
+    display: flex;
+    width: 600px;
+}
+.item {
+    width: 200px;
+    padding: 10px;
+    background-color: lightgreen;
+    margin: 5px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* <!-- This is the sidebar --> */
+.sidebar{
+    width: 200px;
+    display: inline-block;
+    background-color: var(--color-3);
+    padding: 20px;
+    margin: 5px 5px;
+    position: sticky; /* sticky to the top of the page */
+    top: 0; /* top of the page (Necesary for sticky)*/
+}

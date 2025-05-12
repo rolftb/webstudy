@@ -9,36 +9,77 @@
 </head>
 <body>
     <header>
-        <h1>Sobre nosotros</h1>
-        <img src="../media/logo.jpg" alt="Logo de Veterinaria PA a Domicilio" class="logo">
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/about.html">Sobre Nosotros</a></li>
-                    <ul>
-                        <li><a href="../pages/team.html">Equipo</a></li>
-                        <li><a href="../pages/history.html">Historia</a></li>
-                    </ul>
-                <li><a href="../pages/services.html">Servicios</a></li>
-                    <ul>
-                        <li><a href="../pages/wellness.html">Planes de Bienestar</a></li>
-                        <li><a href="../pages/appointments.html">Citas y Precios</a></li>
-                        <li><a href="../pages/emergencies.html">Emergencias</a></li>
-                        <li><a href="../pages/euthanasia.html">Eutanasia en Casa</a></li>
-                        <li><a href="../pages/testimonials.html">Testimonios</a></li>
-                    </ul>
-                <li><a href="../pages/contact.html">Contacto</a></li>
-                <li><a href="../pages/blog.html">Blog</a></li>
+        <div class="header__top">
+            <a href="../pages/contact.html" role="button">
+                <h1>Habla con Dra. Paulina Almeyda</h1>
+            </a>
+        </div>
+        <div class="header__middle">
+            <a href="#" role="button">
+                <img src="../media/logo.jpg" alt="Logo de Veterinaria PA a Domicilio" class="header__logo">
+                <h2 class="header__title">Sobre nosotros</h2>
+            </a>
+        </div>
+        <nav class="navbar">
+            <button class="navbar__toggle" aria-label="Abrir menú" onclick="toggleNavbar()">☰</button>
+            <ul class="navbar__list">
+                <li class="navbar__item"><a class="navbar__link" href="../index.html">Inicio</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/about.html">Sobre Nosotros</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/services.html">Servicios</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/contact.html">Contacto</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
     <main>
-    </header>
-    <main>
-        <p>Bienvenido a nuestra clínica veterinaria, donde el bienestar de tu mascota es nuestra prioridad. Contamos con un equipo de profesionales dedicados a brindar la mejor atención.</p>
+        <main>
+    
+<div class="beginning-page">
+    <h1>Acerca de Nosotros</h1>
+    <p>Conoce nuestra historia, equipo y valores que nos hacen únicos.</p>
+</div>
+<nav>
+    <ul>
+        <li><a href="#welcome">Bienvenida</a></li>
+        <li><a href="#team">Nuestro Equipo</a></li>
+        <li><a href="#history">Nuestra Historia</a></li>
+        <li><a href="#values">Nuestros Valores</a></li>
+        <li><a href="#testimonials">Testimonios</a></li>
+    </ul>
+</nav>
+<section id="welcome">
+    <h2>Bienvenida</h2>
+    <p>En nuestra veterinaria, nos dedicamos a brindar el mejor cuidado para tus mascotas.</p>
+</section>
+<section id="team">
+    <h2>Nuestro Equipo</h2>
+    <p>Contamos con un equipo de profesionales altamente capacitados y apasionados por los animales.</p>
+    <!-- Aquí puedes agregar perfiles individuales del equipo -->
+</section>
+<section id="history">
+    <h2>Nuestra Historia</h2>
+    <p>Desde nuestros inicios, hemos trabajado para convertirnos en una referencia en el cuidado veterinario.</p>
+    <!-- Aquí puedes agregar una línea de tiempo o hitos importantes -->
+</section>
+<section id="values">
+    <h2>Nuestros Valores</h2>
+    <p>Nos guiamos por la compasión, la excelencia y el compromiso con el bienestar animal.</p>
+    <!-- Aquí puedes detallar valores específicos -->
+</section>
+<section id="testimonials">
+    <h2>Testimonios</h2>
+    <p>Descubre lo que nuestros clientes dicen sobre nosotros y cómo hemos ayudado a sus mascotas.</p>
+    <!-- Aquí puedes agregar citas o historias de clientes -->
+</section>
     </main>
     <footer>
         <p>&copy; 2025 Pa Veterinaria</p>
     </footer>
+    <script>
+          function toggleNavbar() {
+            const nav = document.querySelector('.navbar__list');
+            nav.classList.toggle('active');
+          }
+    </script>
 </body>
 </html>

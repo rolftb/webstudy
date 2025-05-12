@@ -9,36 +9,73 @@
 </head>
 <body>
     <header>
-        <h1>Nuestros servicios</h1>
-        <img src="../media/logo.jpg" alt="Logo de Veterinaria PA a Domicilio" class="logo">
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/about.html">Sobre Nosotros</a></li>
-                    <ul>
-                        <li><a href="../pages/team.html">Equipo</a></li>
-                        <li><a href="../pages/history.html">Historia</a></li>
-                    </ul>
-                <li><a href="../pages/services.html">Servicios</a></li>
-                    <ul>
-                        <li><a href="../pages/wellness.html">Planes de Bienestar</a></li>
-                        <li><a href="../pages/appointments.html">Citas y Precios</a></li>
-                        <li><a href="../pages/emergencies.html">Emergencias</a></li>
-                        <li><a href="../pages/euthanasia.html">Eutanasia en Casa</a></li>
-                        <li><a href="../pages/testimonials.html">Testimonios</a></li>
-                    </ul>
-                <li><a href="../pages/contact.html">Contacto</a></li>
-                <li><a href="../pages/blog.html">Blog</a></li>
+        <div class="header__top">
+            <a href="../pages/contact.html" role="button">
+                <h1>Habla con Dra. Paulina Almeyda</h1>
+            </a>
+        </div>
+        <div class="header__middle">
+            <a href="#" role="button">
+                <img src="../media/logo.jpg" alt="Logo de Veterinaria PA a Domicilio" class="header__logo">
+                <h2 class="header__title">Nuestros servicios</h2>
+            </a>
+        </div>
+        <nav class="navbar">
+            <button class="navbar__toggle" aria-label="Abrir menú" onclick="toggleNavbar()">☰</button>
+            <ul class="navbar__list">
+                <li class="navbar__item"><a class="navbar__link" href="../index.html">Inicio</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/about.html">Sobre Nosotros</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/services.html">Servicios</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/contact.html">Contacto</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
     <main>
-    </header>
-    <main>
-        <p>Ofrecemos una amplia gama de servicios para garantizar la salud y felicidad de tu mascota. Desde chequeos regulares hasta tratamientos especializados.</p>
+        
+    <h2>Bienvenido a nuestra Veterinaria</h2>
+    <p>Ofrecemos servicios veterinarios a domicilio para el bienestar de tus mascotas.</p>
+<nav>
+    <ul>
+        <li><a href="#wellness">Planes de Bienestar</a></li>
+        <li><a href="#appointments">Citas y Precios</a></li>
+        <li><a href="#emergencies">Emergencias</a></li>
+        <li><a href="#euthanasia">Eutanasia en Casa</a></li>
+        <li><a href="#testimonials">Testimonios</a></li>
+    </ul>
+</nav>
+<section id="wellness">
+    <h2>Planes de Bienestar</h2>
+    <p>Ofrecemos planes personalizados para el cuidado preventivo de tus mascotas.</p>
+</section>
+<section id="appointments">
+    <h2>Citas y Precios</h2>
+    <p>Consulta nuestras tarifas y agenda una cita con nuestros veterinarios.</p>
+</section>
+<section id="emergencies">
+    <h2>Emergencias</h2>
+    <p>Atendemos emergencias veterinarias las 24 horas del día.</p>
+</section>
+<section id="euthanasia">
+    <h2>Eutanasia en Casa</h2>
+    <p>Brindamos un servicio compasivo y respetuoso para despedir a tu mascota en casa.</p>
+</section>
+<section id="testimonials">
+    <h2>Testimonios</h2>
+    <p>Lee lo que nuestros clientes dicen sobre nuestros servicios.</p>
+</section>
+<footer>
+    <p>&copy; 2023 Veterinaria a Domicilio. Todos los derechos reservados.</p>
+</footer>
     </main>
     <footer>
         <p>&copy; 2025 Pa Veterinaria</p>
     </footer>
+    <script>
+          function toggleNavbar() {
+            const nav = document.querySelector('.navbar__list');
+            nav.classList.toggle('active');
+          }
+    </script>
 </body>
 </html>
