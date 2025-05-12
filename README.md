@@ -20,6 +20,34 @@ brew install node
 
 También puedes descargar Node.js directamente desde [nodejs.org](https://nodejs.org/).
 
+Después de instalar Node.js, instala Sass globalmente con npm:
+```bash
+npm install -g sass
+```
+
+### Versiones utilizadas
+
+- Node.js: 20.x
+- npm: 10.9.2
+- Sass: 1.77.x
+
+### Actualización de npm
+
+Es posible que al instalar paquetes veas un mensaje como este:
+
+```
+npm notice New major version of npm available! 10.9.2 -> 11.3.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.3.0
+npm notice To update run: npm install -g npm@11.3.0
+npm notice
+```
+
+Si deseas actualizar npm a la última versión recomendada, ejecuta:
+
+```bash
+npm install -g npm@11.3.0
+```
+
 ## Contenido
 
 - **HTML**: Estructura básica, etiquetas, atributos, formularios, tablas, etc.
