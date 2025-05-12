@@ -95,8 +95,10 @@ header {
 }
 
 .navbar-principal ul li {
-  flex: unset; /* Ajustes para móviles */
-  width: 100%; /* Ajustes para móviles */
+  flex: unset; 
+  /* Ajustes para móviles */
+  width: 100%; 
+  /* Ajustes para móviles */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,7 +173,7 @@ footer {
 }
 
 /* Media query para tabletas (600px a 1023px) */
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 600px) {
   html {
     font-size: 60%;
   }
