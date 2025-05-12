@@ -27,7 +27,6 @@ p {
         padding: 20px;
     }
 
-
     h1 {
         font-size: 2em;
     }
@@ -83,7 +82,7 @@ html {
   background-color: var(--color-1);
 }
 
-/* Heder */
+/* Header */
 header {
   background-color: var(--color-3);
   color: var(--color-words-1);
@@ -96,7 +95,6 @@ header {
   box-sizing: border-box; /* Asegura que el padding y borde estén incluidos en el tamaño total */
   overflow: hidden; /* Evita que los elementos sobresalgan del contenedor */
 }
-
 
 .header__top a {
   width: 100%;
@@ -130,9 +128,7 @@ header {
   background-color: var(--color-5);
   margin: 5px;
   border-radius: 50%;
-  border: 
-    var(--color-1) 
-    solid 1px;
+  border: var(--color-1) solid 1px;
 }
 .header__middle a .header__title {
   height: 80%;
@@ -144,7 +140,6 @@ header {
 }
 
 .navbar__list {
-  /* se pone el display flex para que se acomoden los elementos */
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -175,44 +170,38 @@ header {
   display: inline-block; /* Cambia a flex para mejor alineación */
   align-items: center; /* Centra verticalmente */
   border-radius: 12%;
-  border: 
-    var(--color-2) 
-    solid 1px;
-  background-color: 
-    var(--color-1);
-  /* Cambia el formato letras y color */
-  font-size: 1.1rem; /* Ajustes para móviles */
+  border: var(--color-2) solid 1px;
+  background-color: var(--color-1);
+  font-size: 1.1rem;
   font-weight: bold;
   color: var(--color-words-1);
-  text-align: center; /* Centra el texto */
+  text-align: center;
 }
 
-
-  /* Solo para asegurar el menú hamburguesa en caso de que no esté en el CSS principal */
+/* Menú hamburguesa */
+.navbar__toggle {
+  display: none;
+  background: var(--color-5, #923182);
+  color: var(--color-1, #fff);
+  border: none;
+  font-size: 2rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 8px;
+}
+@media (max-width: 600px) {
   .navbar__toggle {
+    display: block;
+  }
+  .navbar__list {
     display: none;
-    background: var(--color-5, #923182);
-    color: var(--color-1, #fff);
-    border: none;
-    font-size: 2rem;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 6px;
-    margin: 8px;
+    flex-direction: column;
   }
-  @media (max-width: 600px) {
-    .navbar__toggle {
-      display: block;
-    }
-    .navbar__list {
-      display: none;
-      flex-direction: column;
-    }
-    .navbar__list.active {
-      display: flex;
-    }
+  .navbar__list.active {
+    display: flex;
   }
-
+}
 
 /* Main  index.html */
 main {
@@ -231,8 +220,8 @@ footer {
   border: 2px solid var(--color-words-1);
   position: relative;
   width: 100%;
-  flex-direction: column; /* Ajustes para móviles */
-  height: auto; /* Ajustes para móviles */
+  flex-direction: column;
+  height: auto;
 }
 
 /* Media query para tabletas (600px a 1023px) */
@@ -249,12 +238,12 @@ footer {
   .navbar__list {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around; /* Ajustes para escritorio */
-    gap: 5px; /* Espacio entre los elementos */
-    align-items: center; /* Ajustes para tabletas */
+    justify-content: space-around;
+    gap: 5px;
+    align-items: center;
   }
   .navbar__item {
-    width: auto; /* Ajustes para tabletas */
+    width: auto;
   }
   .main__container {
     flex-direction: row;
@@ -282,10 +271,10 @@ footer {
   }
   .navbar__list {
     flex-direction: row;
-    justify-content: space-around; /* Ajustes para escritorio */
+    justify-content: space-around;
   }
   .navbar__item {
-    width: auto; /* Ajustes para escritorio */
+    width: auto;
   }
   .main__container {
     flex-direction: row;
