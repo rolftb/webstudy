@@ -4,40 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <header>
-        <h1>Contáctanos</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/about.html">Sobre Nosotros</a></li>
-                    <ul>
-                        <li><a href="../pages/team.html">Equipo</a></li>
-                        <li><a href="../pages/history.html">Historia</a></li>
-                    </ul>
-                <li><a href="../pages/services.html">Servicios</a></li>
-                    <ul>
-                        <li><a href="../pages/wellness.html">Planes de Bienestar</a></li>
-                        <li><a href="../pages/appointments.html">Citas y Precios</a></li>
-                        <li><a href="../pages/emergencies.html">Emergencias</a></li>
-                        <li><a href="../pages/euthanasia.html">Eutanasia en Casa</a></li>
-                        <li><a href="../pages/testimonials.html">Testimonios</a></li>
-                    </ul>
-                <li><a href="../pages/contact.html">Contacto</a></li>
-                <li><a href="../pages/blog.html">Blog</a></li>
+        <div class="header__top">
+            <a href="../pages/contact.html" role="button">
+                <h1>Habla con Dra. Paulina Almeyda</h1>
+            </a>
+        </div>
+        <div class="header__middle">
+            <a href="#" role="button">
+                <img src="../media/logo.jpg" alt="Logo de Veterinaria PA a Domicilio" class="header__logo">
+                <h2 class="header__title">Contáctanos</h2>
+            </a>
+        </div>
+        <nav class="navbar">
+            <button class="navbar__toggle" aria-label="Abrir menú" onclick="toggleNavbar()">☰</button>
+            <ul class="navbar__list">
+                <li class="navbar__item"><a class="navbar__link" href="../index.html">Inicio</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/about.html">Sobre Nosotros</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/services.html">Servicios</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/contact.html">Contacto</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="../pages/blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
+    <div class="container">
     <main>
-    </header>
-    <main>
-        <p>Contenido de la página Contáctanos.</p>
+        <!-- Sección de contacto principal -->
+        <section class="jumbotron" aria-labelledby="contact-title">
+            <h1 id="contact-title">Contáctanos</h1>
+            <p>Estamos aquí para ayudarte con cualquier consulta o pregunta que tengas sobre el cuidado de tu mascota.</p>
+            <img src="../media/contact.jpg" alt="Persona hablando con veterinaria por teléfono" class="img-fluid mb-4">
+            <form action="https://example.com/submit" method="POST" class="mb-4">
+                <fieldset>
+                    <legend>Formulario de contacto</legend>
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono:</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </fieldset>
+            </form>
+            <address>
+                <p>También puedes llamarnos al <strong><a href="tel:+521234567890">+52 123 456 7890</a></strong> o visitarnos en nuestras <a href="https://www.facebook.com/" target="_blank" rel="noopener">redes sociales</a>.</p>
+            </address>
+        </section>
     </main>
+</div>
+
     <footer>
-        <p>&copy; 2023 Tu Empresa</p>
+        <p>&copy; 2025 Pa Veterinaria</p>
     </footer>
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+          function toggleNavbar() {
+            const nav = document.querySelector('.navbar__list');
+            nav.classList.toggle('active');
+          }
+    </script>
 </body>
 </html>

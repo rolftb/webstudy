@@ -1,0 +1,49 @@
+{
+    "header": {
+        "title": "Veterinaria a Domicilio",
+        "subtitle": "Cuidamos de tus mascotas en la comodidad de tu hogar"
+    },
+    "main": {
+        "welcome": {
+            "title": "Bienvenido a nuestra Veterinaria",
+            "description": "Ofrecemos servicios veterinarios a domicilio para el bienestar de tus mascotas."
+        },
+        "nav": [
+            { "id": "wellness", "label": "Planes de Bienestar" },
+            { "id": "appointments", "label": "Citas y Precios" },
+            { "id": "emergencies", "label": "Emergencias" },
+            { "id": "euthanasia", "label": "Eutanasia en Casa" },
+            { "id": "testimonials", "label": "Testimonios" }
+        ],
+        "sections": [
+            {
+                "id": "wellness",
+                "title": "Planes de Bienestar",
+                "content": "Ofrecemos planes personalizados para el cuidado preventivo de tus mascotas."
+            },
+            {
+                "id": "appointments",
+                "title": "Citas y Precios",
+                "content": "Consulta nuestras tarifas y agenda una cita con nuestros veterinarios."
+            },
+            {
+                "id": "emergencies",
+                "title": "Emergencias",
+                "content": "Atendemos emergencias veterinarias las 24 horas del día."
+            },
+            {
+                "id": "euthanasia",
+                "title": "Eutanasia en Casa",
+                "content": "Brindamos un servicio compasivo y respetuoso para despedir a tu mascota en casa."
+            },
+            {
+                "id": "testimonials",
+                "title": "Testimonios",
+                "content": "Lee lo que nuestros clientes dicen sobre nuestros servicios."
+            }
+        ]
+    },
+    "footer": {
+        "content": "&copy; 2023 Veterinaria a Domicilio. Todos los derechos reservados."
+    }
+}

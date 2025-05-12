@@ -17,6 +17,18 @@ Este repositorio está destinado a estudiar HTML y sus funciones como CSS y otra
 3. Sigue las instrucciones en los archivos README de cada carpeta para completar los ejercicios.
 4. Experimenta con el código y realiza tus propias modificaciones.
 5. Se recomienda usar la extensión **Live Preview** de VS Code para visualizar los cambios en tiempo real.
+6. Para parar las extensiones, puedes usar el comando `Ctrl + Shift + P` y buscar "Live Preview: Stop Live Preview".
+7. Si lo anterior no funciona para detener el servidor, puedes cerrar la pestaña del navegador o reiniciar VS Code.
+8 Si deseas detener el servidor, puedes usar el comando `Ctrl + C` en la terminal donde se está ejecutando el servidor.
+9. Si todo lo anterior no funciona,  abre la terminal y ejecuta el siguiente comando 
+   ```bash
+   kill $(lsof -t -i:5500)
+   ```
+   Esto detendrá cualquier proceso que esté utilizando el puerto 5500.
+   pero si el puerto es diferente como `http://127.0.0.1:3000/`puedes cambiar el `5500` por el puerto que estés utilizando, de la siguiente manera
+    ```bash
+    kill $(lsof -t -i:3000)
+    ```
 
 ## Contribuciones
 
