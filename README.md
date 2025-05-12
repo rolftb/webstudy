@@ -88,16 +88,16 @@ Para crear y compilar un archivo `style/style-test.scss` y generar el archivo `s
 
 2. Compila el archivo SCSS a CSS usando Sass:
    ```bash
-   sass  styles/style-test.scss  styles/sass-test.css
+   sass  styles/style-test.scss  styles/test-sass.css
    ```
-   Esto generará el archivo `sass-test.css` en el mismo directorio.
+   Esto generará el archivo `test-sass.css` en el mismo directorio.
 
 3. Si quieres que Sass observe los cambios y recompile automáticamente:
    ```bash
-   sass --watch styles/style-test.scss:styles/sass-test.css
+   sass --watch styles/style-test.scss:styles/test-sass.css
    ```
 
-Ahora puedes enlazar `styles/sass-test.css` en tu archivo HTML.
+Ahora puedes enlazar `styles/test-sass.css` en tu archivo HTML.
 
 ## Cómo usar este repositorio
 
